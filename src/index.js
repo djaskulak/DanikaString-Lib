@@ -74,7 +74,6 @@ function snakeCase(str) {
 console.log(snakeCase(' slippery slithering snake '))
 
 //challenge 7: camelCase, lowercases the first word, removes spaces, then uppercases the other words
-/*
 function camelCase(str) {
   const words = str.split(' ')
   const camelWords = words.map((word, i) => {
@@ -87,7 +86,7 @@ function camelCase(str) {
 }
 
 console.log(camelCase('   what day is hump day   '))
-*/
+
 
 //challenge 8: shift, take the first character and move it to the end
 function shift(str) {
@@ -104,3 +103,14 @@ function makeHashTag(str) {
 }
 
 console.log(makeHashTag('    woman crush wednesday   '))
+
+//challenge 10: isEmpty, returns true if string is whitespace
+function isEmpty(str){
+  const chars = str
+  const filtered = str.map( (c) => {
+    if (c == ' '){
+      return true
+    }
+    return false
+  })
+}
