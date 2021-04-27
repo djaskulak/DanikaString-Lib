@@ -74,8 +74,33 @@ function snakeCase(str) {
 console.log(snakeCase(' slippery slithering snake '))
 
 //challenge 7: camelCase, lowercases the first word, removes spaces, then uppercases the other words
+/*
+function camelCase(str) {
+  const words = str.split(' ')
+  const camelWords = words.map((word, i) => {
+    if (i === 0) {
+      return word.toLowerCase()
+    }
+    return capitalize(word)
+  })
+  return camelWords.join('')
+}
 
+console.log(camelCase('   what day is hump day   '))
+*/
 
 //challenge 8: shift, take the first character and move it to the end
+function shift(str) {
+  const firstChar = str.slice(0, 1)
+  return str.slice(1) + firstChar
+}
+
+console.log(shift('shift'))
 
 //challenge 9: makeHashTag, make the word to camelCase and then put a # at the beginning
+function makeHashTag(str) {
+  const camel = camelCase(str)
+  return '#' + camel
+}
+
+console.log(makeHashTag('    woman crush wednesday   '))
