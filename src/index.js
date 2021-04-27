@@ -1,15 +1,36 @@
 // challenge 1: capitalize, makes the first letter of a given string uppercase
 function capitalize(str){
-  return str[0].toUpperCase() + str.slice(1);
+  return str[0].toUpperCase() + str.slice(1)
 }
 
 console.log(capitalize('hello world'))
 
-//challenge 2: allCaps, makes allk characters uppercase
+//challenge 2: allCaps, makes all characters uppercase
+function allCaps(str){
+  return str.toUpperCase()
+}
+
+console.log(allCaps('foo bar'))
 
 //challenge 3: capitalizeWords, makes the first character of each word uppercase
+function capitalizeWords(str){
+  const words = str.split(' ')
+  const upperWords = words.map( word => capitalize(word) )
+  return upperWords.join(' ')
+}
+
+console.log(capitalizeWords('do all the things'))
 
 //challenge 4: removeExtraSpace, removes all spaces
+function removeExtraSpace(str){
+  const trimmed  = str.trim()
+  const chars = trimmed.split(' ')
+  const filtered = chars.filter( (c) => c !== '' )
+  return filtered.join(' ')
+}
+
+console.log(removeExtraSpace(' Hello     World '))
+
 
 //challenge 5: kebobCase, removes spaces and replaces them with hyphens
 
