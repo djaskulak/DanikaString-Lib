@@ -31,12 +31,50 @@ function removeExtraSpace(str){
 
 console.log(removeExtraSpace(' Hello     World '))
 
-
 //challenge 5: kebobCase, removes spaces and replaces them with hyphens
+function kebabCase(str){
+  const lower = str.toLowerCase()
+  const chars = lower.split('')
+  const filtered = chars.filter( (c) => {
+    const code = c.charCodeAt(0)
+    if (code > 96 && code < 123) { //keep letters
+      return true
+    } else if (code > 47 && code < 58) { //keep numbers
+      return true
+    } else if (code === 32 || code === 45) { //keep space and hyphen
+      return true
+    } 
+    return false
+  })
+  const spaceFree = removeExtraSpace(filtered.join(''))
+  return spaceFree.split(' ').join('-')
+}
+
+console.log(kebabCase('   anyone want a gyro   '))
 
 //challenge 6: snakeCase, removes spaces and replaces them with underscores
+function snakeCase(str) {
+  const lower = str.toLowerCase()
+  const chars = lower.split('')
+  const filtered = chars.filter( (c) => {
+    const code = c.charCodeAt(0)
+    if (code > 96 && code < 123) { //keep letters
+      return true
+    } else if (code > 47 && code < 58) { //keep numbers
+      return true
+    } else if (code === 32 || code === 45) { //keep space and hyphen
+      return true
+    } 
+    return false
+  })
+  const spaceFree = removeExtraSpace(filtered.join(''))
+  return spaceFree.split(' ').join('_')
+}
+
+console.log(snakeCase(' slippery slithering snake '))
 
 //challenge 7: camelCase, lowercases the first word, removes spaces, then uppercases the other words
+
 
 //challenge 8: shift, take the first character and move it to the end
 
