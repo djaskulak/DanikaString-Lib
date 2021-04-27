@@ -13,4 +13,4 @@ Contains the following:
 9. makeHashTag() converts a string into a #HashTagString with a maximum of 3 words and capitalizes each word.
 10. isEmpty() returns true if the string only contains whitespace.
 
-NPM library link: https://registry.npmjs.org/String-Lib
+NPM library link: 
