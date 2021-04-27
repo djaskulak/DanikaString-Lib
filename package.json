@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/djaskulak/String-Lib.git"
+    "url": "git+https://github.com/djaskulak/DanikaString-Lib.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/djaskulak/String-Lib/issues"
+    "url": "https://github.com/djaskulak/DanikaString-Lib/issues"
   },
-  "homepage": "https://github.com/djaskulak/String-Lib#readme"
+  "homepage": "https://github.com/djaskulak/DanikaString-Lib#readme"
 }
